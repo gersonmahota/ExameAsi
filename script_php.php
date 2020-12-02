@@ -14,9 +14,9 @@ if($conn->connect_error) {
 
 $statement = "SELECT * FROM cidade WHERE cid_nome LIKE '%$nome_cidade%'";
 
-$result = mysqli_query($database_name, $statement);
+$result = mysqli_query($statement);
 
-while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     echo($row['cid_nome']);
     echo($row['cid_localizacao']);
 }
