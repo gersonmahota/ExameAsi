@@ -1,7 +1,0 @@
-Para fazer push
-git add .
-git commit -m "mensagem"
-git push origin main
-
-Para fazer pull
-git pull origin main
