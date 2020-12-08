@@ -12,7 +12,6 @@ $id_apolice = $_POST['id_apolice'];
 $tipo_apolice = $_POST['tipo_apolice'];
 $montante = $_POST['montante'];
 $data_inicio = $_POST['data_inicio'];
-$contacto_cliente = $_POST['contacto_cliente'];
 
 // Objecto para conexão à base de dados.
 $conn = new mysqli($servername, $username, $password, $db_name);
@@ -21,7 +20,7 @@ if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
 
-$statement = "INSERT INTO Policy VALUES ('$NUIT', '$id_apolice', '$tipo_apolice', $montante, $data_inicio)";
+$statement = "INSERT INTO Policy VALUES ('$NUIT', '$id_apolice', '$tipo_apolice', $montante, '$data_inicio')";
 
 if ($conn->query($statement)) {
     echo("Ap&ogravelice registada com sucesso! :) <br>");
